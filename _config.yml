@@ -1,26 +1,15 @@
+# Site
+name: "TechGK"
 title: "TechGK"
-email: techgk@outlook.com
-timezone: UTC
-baseurl: 
-permalink: "/:title/"
+description: "A place where you gain Technology General Knowledge."
 logo: 'assets/images/logo.png'
-favicon: 'assets/images/favicon.ico'
-author: GK
-paginate: 30
-disqus:
-locale: en_us
-lang: en_us
-feed_items: 10
-feed_update_period: daily
-feed_update_frequency: 1
-markdown: kramdown
-kramdown:
-  syntax_highlighter_opts:
-    disable: true
-sass:
-  sass_dir: _sass
-  style: :compressed
-ganalytics:
+favicon: 'assets/images/logo.png'
+baseurl: 
+google_analytics: 
+disqus: 
+mailchimp-list: 
+include: ["_pages"]
+permalink: /:title/
 
 # Authors
 authors:
@@ -28,29 +17,57 @@ authors:
     name: GK
     display_name: GK
     avatar: 'assets/images/GK.png'
-    email: wowthemesnet@gmail.com
+    gravatar: e56154546cf4be74e393c62d1ae9f9d4
+    email: mail@gmail.com
     web: https://www.geekay.xyz
     twitter: https://twitter.com/_geekay5
-    description: "GK is a techie who passes time by reading and sharing stuff"
+    description: "This is the author box."
   john:
     name: John
-    display_name: John
-    avatar: 'assets/images/john.png'
+    display_name: John    
+    avatar: 'assets/images/avatar.png'
+    gravatar: b1cc14991db7a456fcd761680bbc8f81
     email: wowthemesnet@gmail.com
-    web: https://www.wowthemes.net/category/jekyll-themes/
+    web: https://www.wowthemes.net
     twitter: https://twitter.com/wowthemesnet
-    description: "This is the author box. Write a short description of the author here. You are currently previewing Affiliates theme demo, a Jekyll template compatible with Github pages."
-
-# Social
-social:
-  instagram: https://www.instagram.com/bootstrapstarter/
-  facebook: https://www.facebook.com/bootstrapstartercom-346329609045284
-  twitter: https://twitter.com/_geekay5
+    description: "This is the author box."
 
 # Plugins
-plugins: 
-- jekyll-paginate
-- jekyll-sitemap
-- jekyll-feed
-- jekyll-seo-tag
-- jekyll-archives
+plugins:
+  - jekyll-paginate
+  - jekyll-sitemap
+  - jekyll-feed
+  - jekyll-seo-tag
+  - jekyll-archives
+    
+# Archives
+jekyll-archives:
+  enabled:
+    - categories
+  layout: archive
+  permalinks:
+    category: '/category/:name/'
+    
+# Pagination 
+paginate: 6
+paginate_path: /page:num/
+    
+# Other
+markdown: kramdown
+
+kramdown:
+  input: GFM
+  syntax_highlighter: rouge
+  syntax_highlighter_opts:
+    block:
+      line_numbers: true
+
+# Adsense (change to "enabled" to activate, also your client id and ad slot. Create a new ad unit from your Adsense account to get the slot.)
+adsense: "disabled"
+adsense-data-ad-client: "ca-pub-3412143450191416"
+adsense-data-ad-slot: "1363087678"
+
+# Lazy Images ("enabled" or "disabled")
+lazyimages: "disabled"
+
+exclude: [changelog.md, LICENSE.txt, README.md, Gemfile, Gemfile.lock]

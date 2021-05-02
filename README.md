@@ -1,2 +1,0 @@
-# TechGK
-## Technology General Knowledge
