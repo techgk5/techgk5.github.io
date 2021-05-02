@@ -1,2 +1,2 @@
-# techgk5.github.io
-Technolgy GK
+# TechGK
+## Technology General Knowledge
